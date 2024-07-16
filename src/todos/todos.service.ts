@@ -12,6 +12,7 @@ export class TodosService {
     const todo = await this.prismaService.todo.create({
       data: {
         title: createTodoDto.title,
+        isDone: createTodoDto.isDone,
       },
     });
     return todo;
